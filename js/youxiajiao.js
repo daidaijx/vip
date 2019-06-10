@@ -1,0 +1,24 @@
+﻿var sUserAgent=navigator.userAgent.toLowerCase();var bIsIpad=sUserAgent.match(/ipad/i)=="ipad";var bIsIphone=sUserAgent.match(/iphone/i)=="iphone";var bIsIpod=sUserAgent.match(/ipod/i)=="ipod";var bIsAndroid=sUserAgent.match(/android/i)=="android";var bIsWindowsPhone=sUserAgent.match(/windows phone/i)=="windows phone";if(bIsIpad||bIsIphone||bIsIpod||bIsAndroid||bIsWindowsPhone){移动端js代码}else{document.writeln("<script src=\'js/yxjgg.js\'></script>");
+document.writeln("<style>");
+document.writeln("	#right_bottom{width:250px;height:230px;position:fixed;bottom:0;right:0;}");
+document.writeln("	#right_bottom img{width:100%;height:100%;border-radius:5px;}");
+document.writeln("	#right_bottom #fuchuanga{ position: absolute;right: 0px;top: 0; background: rgba(0, 0, 0, 0.48); color: #FFF;font-size: 14px;padding: 5px 16px;text-decoration: none;border-radius: 4px;cursor: pointer;}");
+document.writeln("	#right_bottom span{position: absolute;left: 10px;top: 10;font-size:13px;}");
+document.writeln("</style>");
+document.writeln("<div id=\'right_bottom\'>");
+document.writeln("	<a rel=\'nofollow\' href=\'http://uland.taobao.com/coupon/list?pid=mm_121445574_38318088_155836200\' target=\'_blank\'><img src=\'images/淘宝300x250.jpg\' width=\'250\' height=\'230\' title=\'\' align=\'\' alt=\'\'></a> <a id=\'fuchuanga\' href=\'javaScript:void(0)\'>关闭</a> ");
+document.writeln("</div>");
+document.writeln("<script>");
+document.writeln("	$(\'#right_bottom a\').on(\'click\',function(){");
+document.writeln("		$(\'#right_bottom\').remove();");
+document.writeln("	});");
+document.writeln("	var time = 60;");
+document.writeln("	var closeAd = setInterval(function(){");
+document.writeln("		if(time==0){");
+document.writeln("			$(\'#right_bottom\').remove();");
+document.writeln("			clearInterval(closeAd);");
+document.writeln("		}");
+document.writeln("		$(\'#right_bottom span\').html(time + \' 秒后自动关闭\');");
+document.writeln("		time--;");
+document.writeln("	},1000)");
+document.writeln("</script>");}
